@@ -1,40 +1,90 @@
-# enqueue - add a item in queue
-# dequeue - remove first item from queue
-# list - list of items in queue
-# size - number of items in queue
+#size dequeue enqueue isEmpty init rear front Queue is FIFO
 
-class queue(object):
+class Queue:
 	def __init__(self):
 		self.items = []
-		
-	def enqueue(self, name):
-		self.items.insert(0,name)
-		
-	def dequeue(self):
-		self.items.pop()
-		
-	def qsize(self):
+
+	def size(self):
 		return len(self.items)
 		
-	def qlist(self):
+   	def list(self):
 		return self.items
+
+	def isEmpty(self):
+		return self.items == []
+
+	def enqueue(self, item):
+		#self.items.insert(0, item)
+		self.items.append(item)
+
+	def dequeue(self):
+		# pop take out last element - FIFO
+		#self.items.pop()
+		del self.items[0]
 		
+	def rear(self):
+	    return self.items[-1]
+	
+	def front(self):
+	    return self.items[0]
 		
-q = queue()
 
-q.enqueue('rangoly')
-q.enqueue('ashish')
-q.enqueue('arham')
+def main():
+	q = Queue()
+	
+	print 'check if queue is Empty - should return True'
+	print q.isEmpty()
+	
+	print 'initially list is empty'
+	print q.list()
+	
+	print 'first element added is 10'
+	print q.enqueue(10)
+	
+	print 'second element added is 30'
+	print q.enqueue(30)
+	
+	print 'list print with 2 elements'
+	print q.list()
+	
+	print 'dequeue - will take out 1st element in - 10'
+	print q.dequeue()
 
-# size of queue
-sz = q.qsize()
-print(sz)
-print(q.qlist())
+	print 'print list after dequeue'
+	print q.list()
+	
+	print 'added hello'
+	print q.enqueue('hello')
 
-q.dequeue()
+	print 'print size is 2'
+	print q.size()
 
-#size of queue
-print(q.qsize())
+	print 'added 10'
+	print q.enqueue(10)
 
-# list of queue after dequeue 1 item
-print(q.qlist())
+	print 'size - 3'
+	print q.size()
+	
+	print 'print list - 3 elements - 30, hello, 10'
+	print q.list()
+	
+	print 'dequeue - first element is now 30'
+	print q.dequeue()
+
+	print 'size - 2'
+	print q.size()
+
+	print 'check if queue is Empty - should return false'
+	print q.isEmpty()
+
+	print 'final list - 2 elements - hello, 10'
+	print q.list()
+	
+	print 'print front element - hello'
+	print q.front()
+	
+	print 'print rear element - 10'
+	print q.rear()
+
+if __name__ == '__main__':
+	main()
