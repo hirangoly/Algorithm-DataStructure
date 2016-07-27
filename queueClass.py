@@ -1,4 +1,4 @@
-#size dequeue enqueue isEmpty init rear front Queue is FIFO
+#Queue Implementation of arrays/List - FIFO
 
 class Queue:
 	def __init__(self):
