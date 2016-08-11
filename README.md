@@ -7,4 +7,4 @@
 5. Insertion Sort
 6. Selection Sort
 7. LRUCache
-8. Depth First Traversal - InOreder, PreOrder, PostOrder
+8. Depth First Traversal - InOrder, PreOrder, PostOrder
