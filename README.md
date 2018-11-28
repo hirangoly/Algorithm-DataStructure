@@ -11,3 +11,4 @@
 9. Breadth First Traversal
 10. Binary Search Tree Traversal without recursion using Stack 
 11. Linked List compare
+12. Permutaion of a string & pairs that sum equals to target
